@@ -15,6 +15,8 @@ Het font dat gebruikt wordt is een google font. Op het moment dat custom fonts w
 ### Kleur
 Qua kleur is de pagina nog goed bruikbaar. Op de hover styles zouden nog underlines kunnen worden toegevoegd, zodat de gebruiker niet van kleur afhankelijk is.
 
+![Kleur](https://github.com/rvdpas/browser-technologies/blob/master/kleur.png)
+
 ### Javascript
 Zonder Javascript werkt de app helemaal niet meer, aangezien hij op basis van Javascript de data ophaalt.
 
