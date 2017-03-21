@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Feature Detection - Hanging Punctiation</title>
+
+    <!-- Responsive & mobiel meta tags -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+
+    <style>
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        blockquote {
+            text-indent: -0.7em; Fallback if the hanging punctiation is not supported.
+        }
+
+        blockquote {
+          font-style: italic;
+          font-size: 2rem;
+          width: 15em;
+          border-left: 1px solid #ddd;
+          padding: 3rem 0.2rem;
+          letter-spacing: 0.05em;
+
+          hanging-punctuation: first;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <main>
+        <blockquote>
+            “Insanity is doing the same thing, over and over again, but expecting different results.” <br>― Narcotics Anonymous
+        </blockquote>
+    </main>
+
+<script></script>
+
+
+</body>
+</html>
