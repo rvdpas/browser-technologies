@@ -8,7 +8,7 @@ Probleem: De video in de header werkt niet meer.
 
 ![Javascript disabled](https://github.com/rvdpas/browser-technologies/blob/master/opdracht-1.1/javascript-disabled.jpg)
 
-Oplossing: Je kan dit oplossen door een fallback toe te voegen en er een afbeelding te plaatsen zodat je niet een grijs vlak krijgt.
+Oplossing: Je kan dit oplossen door een fallback toe te voegen en er een afbeelding te plaatsen zodat je niet een grijs vlak krijgt.__
 [https://www.websteen.nl/](https://www.websteen.nl/)
 
 ### Google
