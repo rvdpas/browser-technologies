@@ -37,7 +37,7 @@ function newGroceryItem() {
   } else {
     document.getElementById("myGroceryList").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  inputValue = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -50,4 +50,13 @@ function newGroceryItem() {
       this.parentElement.parentElement.removeChild(this.parentElement);
     }
   }
+};
+
+document.addEventListener("keydown", my_onkeydown_handler);
+function my_onkeydown_handler() {
+    switch (event.keyCode) {
+      case 13 :
+        newGroceryItem();
+        break;
+    }
 }
