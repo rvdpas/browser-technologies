@@ -14,8 +14,7 @@ for (var i = 0; i < myNodelist.length; i++) {
 var close = document.getElementsByClassName("close");
 for (var i = 0; i < close.length; i++) {
   close[i].onclick = function() {
-    this.parentElement;
-    div.style.display = "none";
+    this.parentElement.parentElement.removeChild(this.parentElement);
   }
 }
 
