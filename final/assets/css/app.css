@@ -1,0 +1,109 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#myGroceryList {
+  margin: 0;
+  padding: 0;
+}
+
+#myGroceryList li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #fff;
+  font-size: 18px;
+  transition: 0.2s;
+  border: 1px solid #ccc;
+  list-style: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#myGroceryList li:hover {
+  border: 1px solid #00cc00;
+}
+
+#myGroceryList li.checked {
+  border-color: #00cc00;
+}
+
+#myGroceryList li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #00cc00;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+section {
+  width: 70%;
+  margin: 0 auto;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 11px 16px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.close:hover {
+  color: #f44336;
+}
+
+input {
+  border: none;
+}
+
+input[type='text'] {
+  border-bottom: 1px solid #c5c5c5;
+  width: 60%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-right: 5%;
+}
+
+main h1, h2 {
+  text-align: center;
+}
+
+.button {
+  padding: 10px;
+  width: 25%;
+  background: #fff;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  color: #333;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #bbb;
+}
