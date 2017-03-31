@@ -51,22 +51,22 @@ html, body {
   width: 7px;
 }
 
-section {
+main {
   width: 70%;
   margin: 0 auto;
 }
 
-section:first-of-type {
-  margin-bottom: 2em;
-}
-
 @media(max-width: 550px) {
-  section {
+  main {
     width: 100%;
     padding: 0 10px;
     margin: 0;
     box-sizing: border-box;
   }
+}
+
+section:first-of-type {
+  margin-bottom: 2em;
 }
 
 section:after {
