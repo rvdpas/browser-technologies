@@ -19,17 +19,22 @@
 
         main {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100%;
         }
 
+        main h1 {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
         input {
             display: block;
-            margin-top: 0.5em;
             border: 1px solid #333;
-            margin-top: 0.5em;
+            margin: 0.3em 0 0.5em;
         }
 
     </style>
@@ -39,10 +44,16 @@
 
 <body>
     <main>
-    <label> Enter your Time and Date
-        <input type="time">
-        <input type="date">
-    </label>
+        <h1>The Time and Data input types</h1>
+
+        <form>
+            <label>Fill in your local time
+                <input type="time" placeholder="15:23">
+            </label>
+            <label>Fill in the date
+                <input type="date" >
+            </label>
+        </form>
     </main>
 
 <script></script>
