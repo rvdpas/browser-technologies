@@ -1,0 +1,36 @@
+<% include partials/head.ejs %>
+    <main>
+        <h1>Create your own Grilled Cheese Sandwich!</h1>
+        <p>Drag the ingredients to your shopping list</p>
+
+        <div class="grocerys">
+            <ul id="grocery-list">
+                <% for (var i = 0; i < grocerys.length; i++) { %>
+                    <li><%= grocerys[i] %></li>
+                <% } %>
+            </ul>
+
+            <a href="/empty">Clear items from list</a>
+        </div>
+
+        <div class="ingredients ">
+            <form method="post" action="/">
+                <div id="bread" class="ingredient">
+                    <img id="0" draggable src="../images/bread.svg" alt="Bread" title="Bread">
+                    <input type="submit" value="Bread" name="grocery">
+                </div>
+
+                <div id="cheese" class="ingredient">
+                    <img id="1" draggable src="../images/cheese.svg" alt="Cheese" title="Cheese">
+                    <input type="submit" value="Cheese" name="grocery">
+                </div>
+
+                <div id="ham" class="ingredient">
+                    <img id="2" draggable src="../images/ham.svg" alt="Ham" title="Ham">
+                    <input type="submit" value="Ham" name="grocery">
+                </div>
+            </form>
+        </div>
+    </main>
+
+<% include partials/footer.ejs %>

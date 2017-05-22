@@ -18,6 +18,12 @@ Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle brow
 ### User Case
 De gebruiker wil een boodschappenlijstje kunnen samenstellen om een tosti te kunnen maken.
 
+
+### Usage of For loops versus forEach
+
+[For loop is faster than forEach](https://jsperf.com/fast-array-foreach)
+http://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html
+
 ### De oplossing
 Ik heb eerst gekeken wat er precies in moet zitten om de eerste laag van progressive enhancement te bereiken. Zorgen dat de gebruiker een boodschappenlijstje kan samenstellen. Dit was nog vrij kaal en daarom heb ik het verreikt met een opties om je eigen versie ervan te maken. De basis ingredienten staan altijd klaar, maar als je hem nog wilt aanpassen naar je lievelings tosti dan kan dat ook. 
 
