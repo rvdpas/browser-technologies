@@ -3,33 +3,46 @@
         <h1>Create your own Grilled Cheese Sandwich!</h1>
         <p>Drag the ingredients to your shopping list</p>
 
-        <div class="grocerys">
-            <ul id="grocery-list">
-                <% for (var i = 0; i < grocerys.length; i++) { %>
-                    <li><%= grocerys[i] %></li>
-                <% } %>
-            </ul>
-
-            <a href="/empty">Clear items from list</a>
+        <div class="grilled-wrapper">
+            <img src="../images/grilled-cheese-sandwich.jpg" alt="Grilled Cheese Sandwich" title="Grilled Cheese Sandwich">
         </div>
 
-        <div class="ingredients ">
-            <form method="post" action="/">
-                <div id="bread" class="ingredient">
-                    <img id="0" draggable src="../images/bread.svg" alt="Bread" title="Bread">
-                    <input type="submit" value="Bread" name="grocery">
-                </div>
+        <div class="shopping-list">
 
-                <div id="cheese" class="ingredient">
-                    <img id="1" draggable src="../images/cheese.svg" alt="Cheese" title="Cheese">
-                    <input type="submit" value="Cheese" name="grocery">
-                </div>
+            <div class="grocerys">
+                <div class="grocerys-wrapper">
+                    <p>Drop your ingredients here</p>
+                    <ul>
+                        <% for (var i = 0; i < grocerys.length; i++) { %>
+                            <li><%= grocerys[i] %></li>
+                        <% } %>
+                    </ul>
 
-                <div id="ham" class="ingredient">
-                    <img id="2" draggable src="../images/ham.svg" alt="Ham" title="Ham">
-                    <input type="submit" value="Ham" name="grocery">
+                    <a href="/empty">Clear items from list</a>
                 </div>
-            </form>
+            </div>
+
+            <div class="ingredients">
+                <form method="post" action="/">
+                    <fieldset class="ingredient">
+                        <legend>Add bread to shopping list</legend>
+                        <img id="0" draggable src="../images/bread.svg" alt="Bread" title="Bread">
+                        <input type="submit" value="Bread" name="grocery">
+                    </fieldset>
+
+                    <fieldset class="ingredient">
+                        <legend>Add cheese to shopping list</legend>
+                        <img id="1" draggable src="../images/cheese.svg" alt="Cheese" title="Cheese">
+                        <input type="submit" value="Cheese" name="grocery">
+                    </fieldset>
+
+                    <fieldset class="ingredient">
+                        <legend>Add Ham to shopping list</legend>
+                        <img id="2" draggable src="../images/ham.svg" alt="Ham" title="Ham">
+                        <input type="submit" value="Ham" name="grocery">
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </main>
 

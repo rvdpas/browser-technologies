@@ -30,7 +30,7 @@ app.post('/', function(req, res) {
 // Clear content .my-grocery-list
 app.get('/empty', function(req, res) {
   grocerys = [];
-  res.render('index', {grocerys: grocerys});
+  res.render('index.ejs', {grocerys: grocerys});
 });
 
 server.listen(3000, function() {

@@ -1,6 +1,6 @@
-var groceryList = document.querySelectorAll('.my-grocery-list');
+var groceryList = document.querySelectorAll('.grocerys');
 var img = document.querySelectorAll('img');
-var userChoices = document.querySelectorAll('input');
+var input = document.querySelectorAll('input');
 
 function drag(e) {
   e.dataTransfer.setData('id', e.target.id);
@@ -13,7 +13,7 @@ function dropToggle(e) {
 function drop(e) {
   e.preventDefault();
   var id = e.dataTransfer.getData('id');
-  userChoices[id].click();
+  input[id].click();
 }
 
 img.forEach(function(img) {

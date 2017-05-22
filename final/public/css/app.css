@@ -2,11 +2,17 @@ header, section, footer, aside, nav, main, article, figure {
   display: block;
 }
 
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
 html, body {
   width: 100%;
   height: 100%;
   color: #333;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   overflow-x: hidden;
   margin: 0;
@@ -15,48 +21,43 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-#myGroceryList {
-  margin: 0;
-  padding: 0;
-}
-
-#myGroceryList li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  background: #fff;
-  font-size: 18px;
-  transition: 0.2s;
-  border: 1px solid #ccc;
-  list-style: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-#myGroceryList li:hover {
-  border: 1px solid #00cc00;
-}
-
-#myGroceryList li.checked {
-  border-color: #00cc00;
-}
-
-#myGroceryList li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #00cc00;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
 main {
   width: 70%;
   margin: 0 auto;
+  height: 100%;
+}
+
+.grilled-wrapper {
+  width: 25%;
+  float: left;
+  margin-right: 4%;
+}
+
+.shopping-list {
+  float: left;
+  width: 70%;
+}
+
+.shopping-list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+form:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+form legend {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 @media(max-width: 550px) {
@@ -68,67 +69,66 @@ main {
   }
 }
 
-section:first-of-type {
+.grocerys {
+  background-color: #ffffff;
+  border: 1px solid #d9d5d0;
+  border-radius: 5px;
+  padding: 1em;
+  box-sizing: border-box;
   margin-bottom: 2em;
 }
 
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 11px 16px;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.close:hover {
-  color: #f44336;
-}
-
-input {
-  border: none;
-}
-
-input[type='text'] {
-  border-bottom: 1px solid #c5c5c5;
-  width: 70%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-  box-sizing: border-box;
-  margin-right: 5%;
-}
-
-h1, h2 {
-  text-align: center;
-  font-weight: 700;
-}
-
-@media(max-width: 550px) {
-  h1 {
-    font-size: 1.4em;
-  }
-}
-
-.button {
-  padding: 10px;
-  width: 25%;
-  background: #fff;
-  border: 1px solid #c5c5c5;
-  border-radius: 5px;
+.grocerys a {
+  padding: 0.5em 0.8em;
+  font-size: 0.9em;
   color: #333;
-  float: left;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
+  border: 1px solid #fa7f7f;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-.button:hover {
-  background-color: #bbb;
+.grocerys a:hover {
+  color: #fff;
+  background: #fa7f7f;
+  border: 1px solid #333;
+  text-decoration: underline;
 }
+
+.ingredients {
+  float: left;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.ingredients .ingredient {
+  width: 31.7%;
+  float: left;
+  margin-right: 1em;
+  height: 10em;
+  border: 1px solid #d9d5d0;
+  box-sizing: border-box;
+  padding: 0 1em;
+}
+
+.ingredients .ingredient:last-child {
+  margin-right: 0;
+}
+
+.ingredients .ingredient input {
+  background-color: #7bcc9f;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 3em;
+  cursor: pointer;
+  font-size: .8em;
+}
+
+.ingredients .ingredient input:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+
+
