@@ -17,3 +17,6 @@
 
 ## Live version
 [Live version](https://rvdpas.github.io/minor/browser-technologies/features/details-tag/index.html)
+
+## Sources
+
