@@ -27,7 +27,7 @@ app.post('/', function(req, res) {
   res.redirect('/');
 });
 
-// Clear content .my-grocery-list
+// Clear content
 app.get('/empty', function(req, res) {
   grocerys = [];
   res.render('index.ejs', {grocerys: grocerys});

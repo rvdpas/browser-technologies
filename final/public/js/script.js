@@ -9,12 +9,12 @@ function drag(e) {
   e.dataTransfer.setData('id', e.target.id);
 }
 
-function dropToggle(e) {
-  e.preventDefault();
+function dropToggle(event) {
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false); // ie fallback
 }
 
-function drop(e) {
-  e.preventDefault();
+function drop(event) {
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   var id = e.dataTransfer.getData('id');
   input[id].click();
 }

@@ -1,5 +1,5 @@
 <% include partials/head.ejs %>
-    <main>
+    <div class="main">
         <h1>Create your own Grilled Cheese Sandwich!</h1>
 
         <div class="grilled-wrapper">
@@ -23,27 +23,27 @@
             </div>
 
             <div class="ingredients">
-                <form method="post" action="/">
+                <form method="POST" action="/">
                     <fieldset class="ingredient">
                         <legend>Add bread to shopping list</legend>
-                        <img id="0" draggable src="../images/bread.svg" alt="Bread" title="Bread">
+                        <img id="0" draggable src="../images/bread.png" alt="Bread" title="Bread">
                         <input type="submit" value="Bread" name="grocery">
                     </fieldset>
 
                     <fieldset class="ingredient">
                         <legend>Add cheese to shopping list</legend>
-                        <img id="1" draggable src="../images/cheese.svg" alt="Cheese" title="Cheese">
+                        <img id="1" draggable src="../images/cheese.png" alt="Cheese" title="Cheese">
                         <input type="submit" value="Cheese" name="grocery">
                     </fieldset>
 
                     <fieldset class="ingredient">
                         <legend>Add Ham to shopping list</legend>
-                        <img id="2" draggable src="../images/ham.svg" alt="Ham" title="Ham">
+                        <img id="2" draggable src="../images/ham.png" alt="Ham" title="Ham">
                         <input type="submit" value="Ham" name="grocery">
                     </fieldset>
                 </form>
             </div>
         </div>
-    </main>
+    </div>
 
 <% include partials/footer.ejs %>

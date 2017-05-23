@@ -18,8 +18,65 @@ Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle brow
 ### User Case
 De gebruiker wil een boodschappenlijstje kunnen samenstellen om een tosti te kunnen maken.
 
+### Drag and drop support
+[drag and drop](https://github.com/rvdpas/browser-technologies/blob/master/final/public/images/drag-and-drop-support.png "drag and drop")
+
+### usage of HTML5 elements
+Older browsers don't know how to handle these elements, so with a small bit of code we can give them a good direction of what we expect.
+```
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+```
+
+The earlier version of Internet Explorer don't support the usage of html5 elements. There are three options i'm going to suggest. The first one is the use of div's instead of html5 elements. The second one is creating them with Javascript. This only works for ie 8 and above.
+```
+<script type="text/javascript">
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('menu');
+    document.createElement('section');
+    document.createElement('article');
+    document.createElement('aside');
+    document.createElement('footer');
+</script>
+```
+
+And the last one is the use of the librairy HTML5 Shiv. This librairy is placed in the head after all the stylesheets and makes sure that you can use the html5 elements in IE version 6-9.
+
+```
+<!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
+```
+
+sources: 
+* [html5](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
+* [html5](https://www.w3schools.com/html/html5_browsers.asp)
+
+
+### SVG problem
+Internet Explorer 9 and lower don't support svg's. I've changed the original images with png's. A second solution could have been the implementation a fallback image. It would have looked something like this:
+```
+ <!--[if lte IE 8]><img src="image.png"><![endif]-->
+ ```
+
+### e.preventdefault
+Internet explorer doesn't support the preventDefault function. Instead you can use:
+```
+event.returnValue = false;
+```
+This will still give an error, so if we check first if it exists and then use the above fallback it works:
+
+```
+event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+```
+
+source: [preventDefault](https://stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie)
 
 ### Usage of For loops versus forEach
+
+ForEach doens't work for internet explorer and needs to fallback on a normal for loop.
 
 [For loop is faster than forEach](https://jsperf.com/fast-array-foreach)
 [For loop vs forEach](http://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html)

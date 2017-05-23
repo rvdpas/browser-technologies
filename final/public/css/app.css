@@ -21,7 +21,7 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-main {
+.main {
   width: 70%;
   margin: 0 auto;
   height: 100%;
@@ -128,7 +128,7 @@ img {
   height: 10em;
   border: 1px solid #d9d5d0;
   box-sizing: border-box;
-  padding: 0 1em;
+  padding: 2em;
   position: relative;
 }
 
