@@ -1,10 +1,11 @@
 # Details & Summary elements
 
 ## What it looks like
-```<details>
-        <summary>This is visible</summary>
-        <p>This is visible when clicked on summary</p>
-    </details>
+```
+<details>
+    <summary>This is visible</summary>
+    <p>This is visible when clicked on summary</p>
+</details>
 ```
 
 ## Can i use
