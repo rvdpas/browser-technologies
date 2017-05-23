@@ -1,3 +1,6 @@
+// Nooroel Imamdi helped me with this part
+// https://github.com/nooroel-imamdi
+
 var groceryList = document.querySelectorAll('.grocerys');
 var img = document.querySelectorAll('img');
 var input = document.querySelectorAll('input');

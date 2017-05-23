@@ -27,10 +27,27 @@ main {
   height: 100%;
 }
 
+@media(max-width: 900px) {
+  main {
+    width: 100%;
+    padding: 0 1em;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
 .grilled-wrapper {
   width: 25%;
   float: left;
   margin-right: 4%;
+}
+
+@media(max-width: 500px) {
+  .grilled-wrapper {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }
 
 .shopping-list {
@@ -38,10 +55,22 @@ main {
   width: 70%;
 }
 
+@media(max-width: 500px) {
+  .shopping-list {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+}
+
 .shopping-list:after {
   content: '';
   display: table;
   clear: both;
+}
+
+.shopping-list h2 {
+  margin-top: 0;
 }
 
 form:after {
@@ -58,15 +87,6 @@ img {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-}
-
-@media(max-width: 550px) {
-  main {
-    width: 100%;
-    padding: 0 10px;
-    margin: 0;
-    box-sizing: border-box;
-  }
 }
 
 .grocerys {
@@ -102,13 +122,32 @@ img {
 }
 
 .ingredients .ingredient {
-  width: 31.7%;
+  width: 31%;
   float: left;
-  margin-right: 1em;
+  margin: 0 1em 4em 0;
   height: 10em;
   border: 1px solid #d9d5d0;
   box-sizing: border-box;
   padding: 0 1em;
+  position: relative;
+}
+
+@media(max-width: 1000px) {
+  .ingredients .ingredient {
+    width: 46%;
+  }
+
+  .ingredients .ingredient:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  .ingredients .ingredient {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }
 
 .ingredients .ingredient:last-child {
@@ -119,10 +158,23 @@ img {
   background-color: #7bcc9f;
   border: 0;
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
   height: 3em;
   cursor: pointer;
   font-size: .8em;
+  position: absolute;
+  bottom: -4em;
+  left: 1.5em;
+  padding: 0;
+}
+
+@media(max-width: 500px) {
+  .ingredients .ingredient input {
+    width: 100%;
+    position: static;
+    left: auto;
+    bottom: auto;
+  }
 }
 
 .ingredients .ingredient input:hover {
