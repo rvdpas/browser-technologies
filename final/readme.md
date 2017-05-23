@@ -1,6 +1,7 @@
-# Browser Technologies Boodschappenlijst
+# Browser Technologies Grilled Cheese Sandwich shoppinglist
 
-## Introductie
+## Introduction
+
 Tijdens de Minor Web Development van de Hva kreeg ik het vak Browser Technologies. In dit vak heb ik uitleg gekregen over het bouwen van goede en toegankelijke websites. Dit doen we door middel van Progressive Enhancement, Feature Detection en het gebruik van fallbacks.
 
 ### Progressive Enhancement
@@ -51,8 +52,8 @@ And the last one is the use of the librairy HTML5 Shiv. This librairy is placed 
 ```
 
 sources: 
-* [html5](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
-* [html5](https://www.w3schools.com/html/html5_browsers.asp)
+* [stackoverflow](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
+* [w3schools](https://www.w3schools.com/html/html5_browsers.asp)
 
 
 ### SVG problem
@@ -74,21 +75,20 @@ event.preventDefault ? event.preventDefault() : (event.returnValue = false);
 
 source: [preventDefault](https://stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie)
 
-### Usage of For loops versus forEach
-
+### forEach
 ForEach doens't work for internet explorer and needs to fallback on a normal for loop.
 
-[For loop is faster than forEach](https://jsperf.com/fast-array-foreach)
-[For loop vs forEach](http://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html)
-
 ### Disabled Javascript
+The events to add to the shopping list is build server side. So if the javascript is disabled, the application is still useful.
 
-### De oplossing
-Ik heb eerst gekeken wat er precies in moet zitten om de eerste laag van progressive enhancement te bereiken. Zorgen dat de gebruiker een boodschappenlijstje kan samenstellen. Dit was nog vrij kaal en daarom heb ik het verreikt met een opties om je eigen versie ervan te maken. De basis ingredienten staan altijd klaar, maar als je hem nog wilt aanpassen naar je lievelings tosti dan kan dat ook. 
+### Offline page
+The service worker caches the page and the styles of the application. 
 
-### Verbeterpunten
+### wishlist
 * Een winkelmandje(icoon) maken, zodat de gebruiker z'n boodschappen er in kan slepen door middel van drag & drop.
-* Koppelen aan een echte supermarkt api, zodat er een prijzenoverzicht kan komen en de gebruiker weet hoeveel het hem kost.  
+* Add a real shopping api, so the user can relate to the list in his local supermarket and have the same price range. 
+* Individual removal of items.
+* Give user the choice to pick own item by searching for them.
 
 ## Live version
 [Live version](https://rvdpas.github.io/minor/browser-technologies/final/index.html)
