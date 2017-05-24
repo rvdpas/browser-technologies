@@ -20,7 +20,7 @@ Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle brow
 De gebruiker wil een boodschappenlijstje kunnen samenstellen om een tosti te kunnen maken.
 
 ### Drag and drop support
-[drag and drop](https://github.com/rvdpas/browser-technologies/blob/master/final/public/images/drag-and-drop-support.png "drag and drop")
+![drag and drop](https://github.com/rvdpas/browser-technologies/blob/master/final/public/images/drag-and-drop-support.png)
 
 ### usage of HTML5 elements
 Older browsers don't know how to handle these elements, so with a small bit of code we can give them a good direction of what we expect.
