@@ -4,8 +4,7 @@
   "description": "Browser Technologies",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "expose": "ngrok http 3000",
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
