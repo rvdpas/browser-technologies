@@ -89,7 +89,7 @@ if (!('forEach' in Array.prototype)) {
 }
 ```
 
-`Source: [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
+Source: [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
 
 
 ### Disabled Javascript
