@@ -54,6 +54,7 @@ And the last one is the use of the librairy HTML5 Shiv. This librairy is placed 
 sources: 
 * [stackoverflow](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
 * [w3schools](https://www.w3schools.com/html/html5_browsers.asp)
+* [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
 
 
 ### SVG problem
@@ -73,10 +74,23 @@ This will still give an error, so if we check first if it exists and then use th
 event.preventDefault ? event.preventDefault() : (event.returnValue = false);
 ```
 
-source: [preventDefault](https://stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie)
+Source: [preventDefault](https://stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie)
 
 ### forEach
 ForEach doens't work for internet explorer and needs to fallback on a normal for loop.
+
+```
+if (!('forEach' in Array.prototype)) {
+    Array.prototype.forEach= function(action, that /*opt*/) {
+        for (var i= 0, n= this.length; i<n; i++)
+            if (i in this)
+                action.call(that, this[i], i, this);
+    };
+}
+```
+
+`Source: [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
+
 
 ### Disabled Javascript
 The events to add to the shopping list is build server side. So if the javascript is disabled, the application is still useful.
