@@ -51,10 +51,6 @@ And the last one is the use of the librairy HTML5 Shiv. This librairy is placed 
 <![endif]-->
 ```
 
-sources: 
-* [stackoverflow](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
-* [w3schools](https://www.w3schools.com/html/html5_browsers.asp)
-* [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
 
 
 ### SVG problem
@@ -88,9 +84,40 @@ if (!('forEach' in Array.prototype)) {
     };
 }
 ```
-
 Source: [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
 
+### QuerySelector
+querySelector isn't available in IE 7, so they created a polyfill that makes sure you can use this function in lower versions of Internet Explorer.
+
+```
+if (!document.querySelectorAll) {
+  document.querySelectorAll = function (selectors) {
+    var style = document.createElement('style'), elements = [], element;
+    document.documentElement.firstChild.appendChild(style);
+    document._qsa = [];
+
+    style.styleSheet.cssText = selectors + '{x-qsa:expression(document._qsa && document._qsa.push(this))}';
+    window.scrollBy(0, 0);
+    style.parentNode.removeChild(style);
+
+    while (document._qsa.length) {
+      element = document._qsa.shift();
+      element.style.removeAttribute('x-qsa');
+      elements.push(element);
+    }
+    document._qsa = null;
+    return elements;
+  };
+}
+
+if (!document.querySelector) {
+  document.querySelector = function (selectors) {
+    var elements = document.querySelectorAll(selectors);
+    return (elements.length) ? elements[0] : null;
+  };
+}
+```
+Source: [querySelector polyfill](https://gist.github.com/chrisjlee/8960575)
 
 ### Disabled Javascript
 The events to add to the shopping list is build server side. So if the javascript is disabled, the application is still useful.
@@ -103,6 +130,12 @@ The service worker caches the page and the styles of the application.
 * Add a real shopping api, so the user can relate to the list in his local supermarket and have the same price range. 
 * Individual removal of items.
 * Give user the choice to pick own item by searching for them.
+
+### Sources 
+* [stackoverflow](https://stackoverflow.com/questions/289225/does-internet-explorer-8-support-html-5)
+* [w3schools](https://www.w3schools.com/html/html5_browsers.asp)
+* [stackoverflow](https://stackoverflow.com/questions/2790001/fixing-javascript-array-functions-in-internet-explorer-indexof-foreach-etc)
+* [querySelector polyfill](https://gist.github.com/chrisjlee/8960575)
 
 ## Live version
 [Live version](https://rvdpas.github.io/minor/browser-technologies/final/index.html)
