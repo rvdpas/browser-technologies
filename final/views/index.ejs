@@ -1,17 +1,11 @@
 <% include partials/head.ejs %>
     <div class="main">
-        <h1>Create your own Grilled Cheese Sandwich!</h1>
-
-        <div class="grilled-wrapper">
-            <img src="../images/grilled-cheese-sandwich.jpg" alt="Grilled Cheese Sandwich" title="Grilled Cheese Sandwich">
-        </div>
+        <h1>Maak je eigen boodschappenlijst</h1>
 
         <div class="shopping-list">
-            <h2>Drag the ingredients to your shopping list</h2>
-
             <div class="grocerys">
                 <div class="grocerys-wrapper">
-                    <p>Drop your ingredients here</p>
+                    <h3>Boodschappenlijst</h3>
                     <ul>
                         <% for (var i = 0; i < grocerys.length; i++) { %>
                             <li><%= grocerys[i] %></li>

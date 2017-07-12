@@ -26,12 +26,13 @@ if (!document.querySelector) {
   };
 }
 
+// local variables
 var groceryList = document.querySelectorAll('.grocerys');
 var img = document.querySelectorAll('img');
 var input = document.querySelectorAll('input');
 var title = document.querySelector('title');
-console.log(title)
 
+// If addEventListener exists do this, else fallback on the inputs
 if(document.addEventListener) {
   for (var i=0; i<img.length; i++) {
     img[i].addEventListener('dragstart', drag);
@@ -50,7 +51,8 @@ function drag(e) {
 }
 
 function dropToggle(event) {
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false); // ie fallback
+  // preventDefault in IE
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
 }
 
 function drop(event) {
@@ -58,4 +60,3 @@ function drop(event) {
   var id = event.dataTransfer.getData('id');
   input[id].click();
 }
-
