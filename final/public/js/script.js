@@ -30,29 +30,15 @@ var groceryList = document.querySelectorAll('.grocerys');
 var img = document.querySelectorAll('img');
 var input = document.querySelectorAll('input');
 
-// if foreach isn't supported use a for loop
-if (!('forEach' in Array.prototype)) {
-    Array.prototype.forEach= function(action, that /*opt*/) {
-        for (var i= 0, n= this.length; i<n; i++)
-            if (i in this)
-                action.call(that, this[i], i, this);
-    };
-} else {
-  img.forEach(function(img) {
-    img.addEventListener('dragstart', drag);
-  });
+for (var i=0; i<img.length; i++) {
+  img[i].addEventListener('dragstart', drag);
+  console.log(img)
+}
 
-  groceryList.forEach(function(e) {
-    e.addEventListener('dragover', dropToggle);
-  });
-
-  groceryList.forEach(function(e) {
-    e.addEventListener('dragleave', dropToggle);
-  });
-
-  groceryList.forEach(function(e) {
-    e.addEventListener('drop', drop);
-  });
+for (var i = 0; i < groceryList.length; i ++) {
+  groceryList[i].addEventListener('dragover', dropToggle);
+  groceryList[i].addEventListener('dragleave', dropToggle);
+  groceryList[i].addEventListener('drop', drop);
 }
 
 function drag(e) {
