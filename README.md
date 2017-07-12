@@ -31,11 +31,11 @@ Er is geen gebruik gemaakt van deze functionaliteiten in deze app.
 ## Device lab
 Ik heb de funda applicatie uitgebreid getest op het devicelab en onderstaande punten vielen mij op.
 
-![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab.png)
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab.jpg)
 
-![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-left.png)
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-left.jpg)
 
-![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-right.png)
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-right.jpg)
 
 Elk apparaat gaf dezelfde ervaring qua uiterlijk van de applicatie. Op IOS apparaten kregen de knoppen een iets andere vorm en de kleuren verschilde een beetje met het gemiddelde apparaat. Het enige echte probleem wat er verbeterd moet worden is het opvragen van de data van Funda. Dit gebeurd via een http request en dat werkt prima lokaal. Op het moment dat hij op een live link komt moet de verbinding een https zijn om verbinding te kunnen krijgen. Op de foto's is het een http verbinding en op 2 telefoons werkte deze connectie wel.
 
