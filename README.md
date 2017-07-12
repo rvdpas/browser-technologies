@@ -27,3 +27,19 @@ Op het moment dat iemand niet beschikt over het gebruik van een muis of trackpad
 
 ### Cookies, Localstorage
 Er is geen gebruik gemaakt van deze functionaliteiten in deze app.
+
+## Device lab
+Ik heb de funda applicatie uitgebreid getest op het devicelab en onderstaande punten vielen mij op.
+
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab.png)
+
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-left.png)
+
+![device lab](https://github.com/rvdpas/browser-technologies/blob/master/device-lab-right.png)
+
+Elk apparaat gaf dezelfde ervaring qua uiterlijk van de applicatie. Op IOS apparaten kregen de knoppen een iets andere vorm en de kleuren verschilde een beetje met het gemiddelde apparaat. Het enige echte probleem wat er verbeterd moet worden is het opvragen van de data van Funda. Dit gebeurd via een http request en dat werkt prima lokaal. Op het moment dat hij op een live link komt moet de verbinding een https zijn om verbinding te kunnen krijgen. Op de foto's is het een http verbinding en op 2 telefoons werkte deze connectie wel.
+
+## Screen reader
+De applicatie is door de screen reader ChromeVox gegaan. Dit is een chrome plugin die door je pagina loopt als een screen reader. De volgend punten vielen mij op
+- Hij slaat de Kop over waardoor je gelijk bij de option velden komt. Hierdoor is het niet duidelijk waarvoor je de optie velden invoerd. Dit is eenvoudig op te lossen door een tabindex toe te voegen.
+- Je kan niet door de huizen heen tabben. Dit komt omdat het momenteel allemaal losse artikelen zijn. Dit zouden a tags moeten worden zodat je ook naar de detailpagina kan gaan. Als het linkjes zijn geworden dan zijn ze wel beschikbaar voor de screen reader.

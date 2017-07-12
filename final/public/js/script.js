@@ -29,16 +29,20 @@ if (!document.querySelector) {
 var groceryList = document.querySelectorAll('.grocerys');
 var img = document.querySelectorAll('img');
 var input = document.querySelectorAll('input');
+var title = document.querySelector('title');
+console.log(title)
 
-for (var i=0; i<img.length; i++) {
-  img[i].addEventListener('dragstart', drag);
-  console.log(img)
-}
-
-for (var i = 0; i < groceryList.length; i ++) {
-  groceryList[i].addEventListener('dragover', dropToggle);
-  groceryList[i].addEventListener('dragleave', dropToggle);
-  groceryList[i].addEventListener('drop', drop);
+if(document.addEventListener) {
+  for (var i=0; i<img.length; i++) {
+    img[i].addEventListener('dragstart', drag);
+  }
+  for (var i = 0; i < groceryList.length; i ++) {
+    groceryList[i].addEventListener('dragover', dropToggle);
+    groceryList[i].addEventListener('dragleave', dropToggle);
+    groceryList[i].addEventListener('drop', drop);
+  }
+} else {
+  title.innerHTML = "Add ingredients by clicking the button";
 }
 
 function drag(e) {
