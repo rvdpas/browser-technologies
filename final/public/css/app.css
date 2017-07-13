@@ -85,6 +85,7 @@ img {
   box-sizing: border-box;
   margin-bottom: 2em;
   margin-right: 1.4em;
+  box-shadow: 0 6px 14px -3px gray;
 }
 
 @media (max-width: 1150px) {
