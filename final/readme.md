@@ -128,7 +128,6 @@ The service worker caches the page and the styles of the application.
 ### wishlist
 * Een winkelmandje(icoon) maken, zodat de gebruiker z'n boodschappen er in kan slepen door middel van drag & drop.
 * Add a real shopping api, so the user can relate to the list in his local supermarket and have the same price range. 
-* Individual removal of items.
 * Give user the choice to pick own item by searching for them.
 
 ### Sources 
@@ -138,4 +137,3 @@ The service worker caches the page and the styles of the application.
 * [querySelector polyfill](https://gist.github.com/chrisjlee/8960575)
 
 ## Live version
-[Live version](https://rvdpas.github.io/minor/browser-technologies/final/index.html)
