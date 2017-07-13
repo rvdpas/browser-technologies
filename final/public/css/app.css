@@ -29,25 +29,11 @@ html, body {
 }
 
 @media(max-width: 900px) {
-  main {
+  .main {
     width: 100%;
     padding: 0 1em;
     margin: 0;
     box-sizing: border-box;
-  }
-}
-
-.grilled-wrapper {
-  width: 25%;
-  float: left;
-  margin-right: 4%;
-}
-
-@media(max-width: 500px) {
-  .grilled-wrapper {
-    width: 100%;
-    float: none;
-    margin-right: 0;
   }
 }
 
@@ -101,6 +87,13 @@ img {
   margin-right: 1.4em;
 }
 
+@media (max-width: 1150px) {
+  .grocerys {
+    width: 100%;
+    float: none;
+  }
+}
+
 .grocerys .empty {
   padding: 0.5em 0.8em;
   font-size: 0.9em;
@@ -125,6 +118,13 @@ img {
   border-radius: 5px;
 }
 
+@media (max-width: 1150px) {
+  .ingredients {
+    width: 100%;
+    float: none;
+  }
+}
+
 .ingredients .ingredient {
   width: 30%;
   float: left;
@@ -136,27 +136,34 @@ img {
   position: relative;
 }
 
-@media(max-width: 1000px) {
-  .ingredients .ingredient {
-    width: 46%;
-  }
+.ingredients .ingredient:last-child {
+  margin-right: 0;
+}
 
-  .ingredients .ingredient:nth-child(2) {
-    margin-right: 0;
+@media(max-width: 1150px) {
+  .ingredients .ingredient {
+    width: 31%;
   }
 }
 
 @media(max-width: 500px) {
   .ingredients .ingredient {
-    width: 100%;
-    float: none;
-    margin-right: 0;
+    width: 45%;
   }
 }
 
-.ingredients .ingredient:last-child {
-  margin-right: 0;
+@media(max-width: 400px) {
+  .ingredients .ingredient {
+    width: 70%;
+    margin: 0 auto 3em auto;
+    float: none;
+  }
+
+  .ingredients .ingredient:last-child {
+    margin-right: auto;
+  }
 }
+
 
 .ingredients .ingredient input {
   background-color: #7bcc9f;
@@ -175,9 +182,9 @@ img {
 @media(max-width: 500px) {
   .ingredients .ingredient input {
     width: 100%;
-    position: static;
-    left: auto;
-    bottom: auto;
+    left: 0;
+    bottom: 0;
+    bottom: -30px;
   }
 }
 
