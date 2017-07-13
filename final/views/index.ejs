@@ -8,11 +8,11 @@
                     <h3>Boodschappenlijst</h3>
                     <ul>
                         <% for (var i = 0; i < grocerys.length; i++) { %>
-                            <li><%= grocerys[i] %></li>
+                            <li><%= grocerys[i] %><span class="remove">X</span></li>
                         <% } %>
                     </ul>
 
-                    <a href="/empty">Clear items from list</a>
+                    <a class="empty" href="/empty">Clear items from list</a>
                 </div>
             </div>
 

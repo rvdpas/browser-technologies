@@ -33,7 +33,7 @@ var input = document.querySelectorAll('input');
 var title = document.querySelector('title');
 
 // If addEventListener exists do this, else fallback on the inputs
-if(document.addEventListener) {
+if(document.addEventListener && 'draggable' in document.createElement('span')) {
   for (var i=0; i<img.length; i++) {
     img[i].addEventListener('dragstart', drag);
   }
@@ -42,21 +42,25 @@ if(document.addEventListener) {
     groceryList[i].addEventListener('dragleave', dropToggle);
     groceryList[i].addEventListener('drop', drop);
   }
-} else {
-  title.innerHTML = "Add ingredients by clicking the button";
+
+  function drag(e) {
+    e.dataTransfer.setData('id', e.target.id);
+  }
+
+  function dropToggle(event) {
+    // preventDefault in IE
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+  }
+
+  function drop(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    var id = event.dataTransfer.getData('id');
+    input[id].click();
+  }
 }
 
-function drag(e) {
-  e.dataTransfer.setData('id', e.target.id);
-}
 
-function dropToggle(event) {
-  // preventDefault in IE
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-}
-
-function drop(event) {
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-  var id = event.dataTransfer.getData('id');
-  input[id].click();
+var listItems = document.getElementsByTagName("li");
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].onclick = function() {this.parentNode.removeChild(this);}
 }
